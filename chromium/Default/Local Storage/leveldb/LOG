@@ -1,0 +1,6 @@
+2026/02/19-23:16:14.395 5 Reusing MANIFEST /home/micel/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2026/02/19-23:16:14.401 5 Recovering log #154
+2026/02/19-23:16:14.402 5 Reusing old log /home/micel/.config/chromium/Default/Local Storage/leveldb/000154.log 
+2026/02/19-23:16:27.856 7 Level-0 table #158: started
+2026/02/19-23:16:27.860 7 Level-0 table #158: 26481 bytes OK
+2026/02/19-23:16:27.863 7 Delete type=0 #154
