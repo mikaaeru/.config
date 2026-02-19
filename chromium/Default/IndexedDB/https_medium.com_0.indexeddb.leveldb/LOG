@@ -1,7 +1,0 @@
-2026/02/19-13:26:27.922 266ea Reusing MANIFEST /home/micel/.config/chromium/Default/IndexedDB/https_medium.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/02/19-13:26:27.922 266ea Recovering log #3
-2026/02/19-13:26:27.922 266ea Reusing old log /home/micel/.config/chromium/Default/IndexedDB/https_medium.com_0.indexeddb.leveldb/000003.log 
-2026/02/19-13:58:43.915 266eb Level-0 table #5: started
-2026/02/19-13:58:43.916 266eb Level-0 table #5: 15755 bytes OK
-2026/02/19-13:58:43.916 266eb Delete type=0 #3
-2026/02/19-13:58:43.916 266eb Manual compaction at level-0 from (begin) .. (end); will stop at (end)
