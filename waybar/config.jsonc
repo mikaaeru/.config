@@ -37,11 +37,11 @@
             "4": [],
             "5": [],
             "6": []
-        },
+	}
     },
     "sway/window": {
         "format": "<span color='#ffffff' weight='bold'>{}</span>",
-        "max-length": 50
+        "max-length": 100
     },
     "keyboard-state": {
         "numlock": true,

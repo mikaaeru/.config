@@ -3,8 +3,10 @@ easyeffects/
 fcitx/
 fcitx5/
 gh/
-# Also ignore these common bulky/sensitive folders
 google-chrome/
-microsoft-edge/
-Pulse/
+pulse/
 dconf/
+mozilla/
+ibus/
+libreoffice/
+

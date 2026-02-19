@@ -23,7 +23,6 @@ exec easyeffects --hide-window
 for_window [app_id="eog"] floating enable
 exec fcitx5 -d
 
-
 # target           border     bg         text       indicator  child_border
 client.focused_inactive #888888 #888888 #ffffff    #888888    #888888
 client.focused     #d1d1d1    #d1d1d1    #000000    #d1d1d1    #d1d1d1
