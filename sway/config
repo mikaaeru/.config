@@ -94,7 +94,7 @@ for_window [app_id="brave-browser-beta" title="Bitwarden"] floating enable, resi
 bindsym $mod+f exec thunar -w
 
 # Run chrome 
-bindsym $mod+b exec /usr/bin/brave-browser-beta --enable-features=TouchpadOverscrollHistoryNavigation,WaylandWindowDecorations --ignore-gpu-blocklist --disable-gpu-driver-bug-workaround --ozone-platform=wayland %U
+bindsym $mod+b exec /usr/bin/brave-browser-beta --enable-features=TouchpadOverscrollHistoryNavigation --ignore-gpu-blocklist --disable-gpu-driver-bug-workaround --ozone-platform=wayland %U
 
 # Wallpaper configuration requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
 output * bg ~/Pictures/F37-01-night.jpg fill
