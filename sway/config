@@ -2,9 +2,10 @@
 ### Variables
 
 output "eDP-1" {
-        scale 1.52381
+        scale 1.428571
         scale_filter smart
 	color_profile icc /home/micel/.config/iphone.icc 
+	render_bit_depth 10
     }
 input "type:touchpad" {
     scroll_factor 0.3
@@ -19,7 +20,7 @@ exec dbus-update-activation-environment --all
 exec /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
 exec /usr/libexec/xdg-desktop-portal-gtk -r
 exec thunar --daemon
-exec easyeffects --hide-window
+#exec easyeffects --hide-window
 for_window [app_id="eog"] floating enable
 exec fcitx5 -d
 
@@ -52,11 +53,40 @@ bindsym $mod+Shift+Control+3 exec grimshot --notify copy screen
 bindsym $mod+Shift+4 exec grimshot --notify save anything "/home/micel/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
 bindsym $mod+Shift+Control+4 exec grimshot --notify copy anything
 
+# Zotero other dialog
+
+for_window [app_id="zotero" title="Quick Format Citation"] floating enable
+for_window [class="Zotero" title="Quick Format Citation"] floating enable
+for_window [app_id="zotero" title="Zotero - Document Preferences"] floating enable
+for_window [class="Zotero" title="Zotero - Document Preferences"] floating enable
+for_window [title="Quick Format Citation"] move position center
+
+# Zotero "Citation Dialog"
+for_window [app_id="zotero" title="Citation Dialog"] floating enable
+for_window [class="Zotero" title="Citation Dialog"] floating enable
+for_window [title="Citation Dialog"] move position center
+
+# Floating + Sticky PIP (Follows workspaces)
+for_window [title="Picture in picture"] floating enable, sticky enable
+for_window [title="Picture-in-picture"] floating enable, sticky enable
+for_window [title="Picture in picture"] resize set 300 169, move position 1483 915
+for_window [title="Picture in picture"] border pixel 2, floating enable, sticky enable
+
+# Float Bitwarden Extension Popups
+for_window [title="Bitwarden"] {
+    floating enable
+    resize set 400 600
+    move position center
+}
+
+# Specific rule for the "Pop-out" window version
+for_window [app_id="brave-browser-beta" title="Bitwarden"] floating enable, resize set 400 600
+
 # Run thunar on mod+F
 bindsym $mod+f exec thunar -w
 
 # Run chrome 
-bindsym $mod+b exec chromium-browser --enable-features=TouchpadOverscrollHistoryNavigation,MiddleClickAutoscroll,WaylandWindowDecorations --ozone-platform=wayland %U
+bindsym $mod+b exec /usr/bin/brave-browser-beta --enable-features=TouchpadOverscrollHistoryNavigation,WaylandWindowDecorations --ignore-gpu-blocklist --disable-gpu-driver-bug-workaround --ozone-platform=wayland %U
 
 # Wallpaper configuration requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
 output * bg ~/Pictures/F37-01-night.jpg fill

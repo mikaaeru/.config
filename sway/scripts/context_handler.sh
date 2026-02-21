@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WINDOW_INFO=$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | "\(.app_id) \(.window_properties.class)"')
-IS_CHROME=$(echo "${WINDOW_INFO,,}" | grep -Ei "chromium|chrome")
+IS_CHROME=$(echo "${WINDOW_INFO,,}" | grep -Ei "chromium|chrome|brave|brave-browser|brave-browser-beta")
 
 case "$1" in
     close)
